@@ -1,0 +1,9 @@
+main: arthessia.hearthstone.Plugin
+name: hearthstone
+version: 1.0.0.0
+api-version: 1.19
+
+commands:
+    hearthstone:
+        description: check heartstone cooldown
+        usage: /<command>
