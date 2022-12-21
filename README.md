@@ -4,9 +4,9 @@ This plugin allows your players to create two potions and use one command.
 
 ## homestone potion
 
-|A|B|C|
-| |D| |
-| |E| |
+* |A|B|C|
+* | |D| |
+* | |E| |
 
 Recipe:
 * A : Nether Wart
@@ -19,9 +19,9 @@ Recipe:
 
 ## hearthstone potion
 
-|A|B|C|
-| |D| |
-| |E| |
+* |A|B|C|
+* | |D| |
+* | |E| |
 
 Recipe:
 * A : Ender Perl
