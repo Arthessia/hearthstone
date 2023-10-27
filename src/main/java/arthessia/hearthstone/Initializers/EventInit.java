@@ -15,7 +15,6 @@ public class EventInit {
 				try {
 					if (Listener.class.isAssignableFrom(clazz)) {
 						Listener event = (Listener) clazz.getDeclaredConstructor().newInstance();
-						String eventName = classInfo.getSimpleName().replace("Event", "");
 						Plugin.plugin.getServer().getPluginManager().registerEvents(event, Plugin.plugin);
 					}
 				} catch (Exception e) {

@@ -10,22 +10,19 @@ import arthessia.hearthstone.objects.LocationHearth;
 
 public class HearthstoneCommand implements CommandExecutor {
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
-    	if(!(sender instanceof Player))
-    		return true;
-    	
-    	Player player = (Player) sender;
-    	LocationHearth loc = Plugin.getLocationHearth(player);
-    	if(loc == null)
-    		return true;
-    	
-    	long seconds = loc.getCooldownLong(Plugin.getCooldown());
-    	if(seconds == 0) {
-    		sender.sendMessage("The potion looks at the right temperature.");
-    	} else {
-    		sender.sendMessage(seconds + " seconds remaining...");
-    	}
-        return true;
-    }
+	@Override
+	public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
+		if (!(sender instanceof Player))
+			return true;
+
+		Player player = (Player) sender;
+		LocationHearth loc = Plugin.getLocationHearth(player);
+		if (loc == null)
+			return true;
+
+		long seconds = loc.getCooldownLong(Plugin.getCooldown());
+		sender.sendMessage(
+				(seconds == 0) ? "The potion looks at the right temperature." : seconds + " seconds remaining...");
+		return true;
+	}
 }
